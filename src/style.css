@@ -1,0 +1,62 @@
+body{
+    background-image: url(IMG/fondo.jpg);
+    width: 1440px;
+    height: 300px;
+}
+
+#titular{
+    color: aliceblue;
+
+}
+
+#vista1{
+    justify-content: space-between;
+    align-items: center;
+}
+
+#personajes{
+    background-image: url(IMG/perso6.jpg);
+    width: 400px;
+    height: 400px;    
+}
+
+#varitas{
+    background-image: url(IMG/varit2.jpg);
+    width: 400px;
+    height: 400px;    
+}
+#patronum{
+    background-image: url(IMG/patro1.jpg);
+    width: 400px;
+    height: 400px;
+}
+
+#harry{
+    background-image: url(IMG/harry.png);
+    width: 256px;
+    height: 256px;
+    margin-top: 700px;
+    margin-left: 110px;
+}
+
+#germione{
+    background-image: url(IMG/hermione.jpg);
+    width: 256px;
+    height: 256px;
+    margin-left: 70px;
+}
+
+#ron{
+    background-image: url(IMG/ron.jpeg);
+    width: 256px;
+    height: 256px;
+    margin-left: 70px;
+}
+
+#draco{
+    background-image: url(IMG/draco.jpg);
+    width: 256px;
+    height: 256px;
+    margin-right: 5px;
+    margin-left: 70px;
+}
