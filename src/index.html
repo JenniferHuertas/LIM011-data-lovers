@@ -8,38 +8,78 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="main.js"></script>
-
-    <header>
-      <section id="titular">
-        <h1>HARRY POTTER</h1>
-      </section>
+    <header> 
+      <img src="IMG/Harry-Potter-Logo.png" alt="">
     </header>
     <main>
       <section id="vista1">
-          <button id="personajes"></button>
-          <button id="varitas"></button>
-          <button id="patronum"></button>
+            <button id="btnpersonajes"></button>
+            <button id="btnvaritas"></button>
+            <button id="btnpatronum"></button>        
       </section>
-      <section id="vista2">
-        <button id="harry"></button>
-        <button id="germione"></button>
-        <button id="ron"></button>
-        <button id="draco"></button>
+
+      <section id="vista2" class="hide">
+            <button id="btnharry"></button>
+            <button id="btngermione"></button>
+            <button id="btnron"></button>
+            <button id="btndraco"></button>
+            <button id="btnminerva">Minerva McGonagall</button>
+            <button id="btncedric">Cedric Diggory</button>
+            <button id="btncho">Cho Chang</button>
+            <button id="btnseverus">Severus Snape</button>
+            <button id="btnhagrid">Rubeus Hagrid</button> 
+            <button id="btnnevile">Neville Longbottom</button>
+            <button id="btnluna">Luna Lovegood</button>  
+            <button id="btnginny">Ginny Weasley</button>
+            <button id="btnsirius">Sirius Black</button>
+            <button id="btnremus">Remus Lupin</button>
+            <button id="btnarthur">Arthur Weasley</button>
+            <button id="btnbellatrix">Bellatrix Lestrange</button>
+            <button id="btnvoldemort">Lord Voldemort</button>
+            <button id="btnslughorn">Horace Slughorn</button>
+            <button id="btnkingsley">Kingsley Shacklebolt</button>
+            <button id="btnumbridge">Dolores Umbridge</button>
+            <button id="btnlucius">Lucius Malfoy</button>
+            <button id="btnvincent">Vincent Crabbe</button>
+            <button id="btngregory">Gregory Goyle</button>
+            <button id="btnnorris">Mrs Norris</button>
+            <button id="btnargus">Argus Filch</button>
+
+      </section>
+
+      <section id="vista3" class="hide">
+        <h1>VARITAS</h1>
+      </section>
+      <section id="vista4" class="hide">
+        <h1>PATRONUMS</h1>
+      </section>
+
+      <section id="datosharry" class="hide">
+        <ul>
+        <li>name: 'Harry Potter'</li>
+        <li>species: 'human'</li>
+        <li>gender: 'male'</li>
+        <li>house: 'Gryffindor'</li>   
+        <li>dateOfBirth: '31-07-1980'</li>  
+        <li>yearOfBirth: 1980</li>    
+        <li>ancestry: 'half-blood'</li>    
+        <li> eyeColour: 'green'</li>   
+        <li>hairColour: 'black'</li>    
+        <li>wand: {
+          wood: 'holly',
+          core: 'phoenix feather',
+          length: 11,
+        }</li>    
+        <li>actor: 'Daniel Radcliffe'</li>    
+          
+
+        </ul>
       </section>
       
     </main>
 
     <footer></footer>
 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-
+    <script type="module" src="main.js"></script>
   </body>
-
-
-
-
-  
 </html>
