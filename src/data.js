@@ -2,6 +2,6 @@
 
 // esta es una función de ejemplo
 
-export const mostrar = () => {
-  return 'datos';
+export const verpersonajes = () => {
+  return 'verpersonajes';
 };

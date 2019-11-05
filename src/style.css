@@ -3,14 +3,24 @@ body{
     width: 1440px;
     height: 1024spx;
 }
-
 img{
-    width: 932px;
+    width: 1000px;
     height: 391px;
     margin-left: 300px;
-    margin-top: 50px;
+    margin-top: 50px; 
 }
-
+.botones{
+  display: inline-block; 
+}
+.imagen{
+  width: 256px;
+  height: 256px;
+  margin-left: 28px;
+}
+.nombre{
+    margin-left: 80px;
+    color: ivory;
+}
 #btnpersonajes{
     background-image: url(IMG/perso6.jpg);
     width: 400px;
@@ -32,36 +42,6 @@ img{
     margin-left: 65.010px;
 
 }
-
-#btnharry{
-    background-image: url(IMG/harry.png);
-    width: 256px;
-    height: 256px;
-    margin-left: 110px;
-}
-
-#btngermione{
-    background-image: url(IMG/hermione.jpg);
-    width: 256px;
-    height: 256px;
-    margin-left: 70px;
-}
-
-#btnron{
-    background-image: url(IMG/ron.jpeg);
-    width: 256px;
-    height: 256px;
-    margin-left: 70px;
-}
-
-#btndraco{
-    background-image: url(IMG/draco.jpg);
-    width: 256px;
-    height: 256px;
-    margin-right: 5px;
-    margin-left: 70px;
-}
-
 .hide {
     display: none;
     
