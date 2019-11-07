@@ -9,13 +9,17 @@ img{
     margin-left: 300px;
     margin-top: 50px; 
 }
-.botones{
-  display: inline-block; 
+
+.cartilla{
+    color: ivory;
+}
+#name{
+  color: aqua;
 }
 .imagen{
   width: 256px;
   height: 256px;
-  margin-left: 28px;
+  margin-left: 2px;
 }
 .nombre{
     margin-left: 80px;
@@ -44,5 +48,4 @@ img{
 }
 .hide {
     display: none;
-    
 }
