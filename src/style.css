@@ -11,20 +11,34 @@ img{
 }
 
 .cartilla{
-    color: ivory;
+    color: aqua;
 }
-#name{
+.nombre1{
   color: aqua;
 }
-.imagen{
+.imagen1{
   width: 256px;
   height: 256px;
   margin-left: 2px;
 }
-.nombre{
-    margin-left: 80px;
-    color: ivory;
-}
+.imagen2{
+    width: 256px;
+    height: 256px;
+    margin-left: 2px;
+  }
+
+  .imagen3{
+    width: 256px;
+    height: 256px;
+    margin-left: 2px;
+  }
+
+  .imagen4{
+    width: 256px;
+    height: 256px;
+    margin-left: 2px;
+  }
+
 #btnpersonajes{
     background-image: url(IMG/perso6.jpg);
     width: 400px;
@@ -46,6 +60,15 @@ img{
     margin-left: 65.010px;
 
 }
+
+.vista3{
+    color: aqua;
+}
+
+.vista4{
+    color: aqua;
+}
+
 .hide {
     display: none;
 }
