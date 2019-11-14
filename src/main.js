@@ -1,5 +1,5 @@
 import POTTER from './data/potter/potter.js';
-import {filterPatronus, imagePatronus, filterVaritas, imageVaritas, filterRoles, filterCasas} from './data.js';
+import {filterPatronus, imagePatronus, filterVaritas, imageVaritas, filterRolesCasas} from './data.js';
 
 
 
@@ -19,8 +19,10 @@ const casas = document.querySelector('#casas');
 const containerImage = (data) => {
   const sectionElement = document.createElement('section');
   sectionElement.innerHTML = `
-  <img class = "imagen1" src= ${data.image}>
-  <p class ="nombre1"> Nombre: ${data.name} </p>
+  <section class = "lispersonajes">
+    <img class = "imagen1" src= ${data.image}>
+    <p> Nombre: ${data.name} </p>
+  </section>
   `;
   sectionElement.addEventListener('click', (event) => {
     event.preventDefault();
@@ -28,7 +30,7 @@ const containerImage = (data) => {
     datosPersonaje.classList.remove('hide');
     datosPersonaje.innerHTML = `  
     <ul class="cartilla" >
-    <img class = "imagen2" src= ${data.image}>
+    <img class = "imagen1" src= ${data.image}>
     <li>Nombre: ${data.name}</li>
     <li>Especie: ${data.species}</li>
     <li>Género: ${data.gender}</li>
@@ -56,12 +58,12 @@ roles.addEventListener('change', (event) => {
   vista2.innerHTML = '';
 
   if (event.target.value === 'estudiantes') {
-    const filterEstudiantes = filterRoles(POTTER, 'hogwartsStudent', true);
+    const filterEstudiantes = filterRolesCasas(POTTER, 'hogwartsStudent', true);
     for (let i = 0; i < filterEstudiantes.length; i += 1) {
       vista2.appendChild(containerImage(filterEstudiantes[i]));
     }
   } else if (event.target.value === 'profesores') {
-    const filterProfesores = filterRoles(POTTER, 'hogwartsStaff', true);
+    const filterProfesores = filterRolesCasas(POTTER, 'hogwartsStaff', true);
     for (let i = 0; i < filterProfesores.length; i += 1) {
       vista2.appendChild(containerImage(filterProfesores[i]));
     }
@@ -77,16 +79,26 @@ casas.addEventListener('change', (event) => {
   vista2.innerHTML = '';
 
   if (event.target.value === 'gryffindor') {
-    const filterCasas1 = filterCasas(POTTER, 'house', 'gryffindor');
-    for (let i = 0; i < filterCasas1.length; i += 1) {
-      vista2.appendChild(containerImage(filterCasas1[i]));
+    const filterGryffindor = filterRolesCasas(POTTER, 'house', 'Gryffindor');
+    for (let i = 0; i < filterGryffindor.length; i += 1) {
+      vista2.appendChild(containerImage(filterGryffindor[i]));
     }
   } else if (event.target.value === 'slytherin') {
-    const filterCasas1 = filterCasas(POTTER, 'house', 'slytherin');
-    for (let i = 0; i < filterCasas1.length; i += 1) {
-      vista2.appendChild(containerImage(filterCasas1[i]));
+    const filterSlytherin = filterRolesCasas(POTTER, 'house', 'Slytherin');
+    for (let i = 0; i < filterSlytherin.length; i += 1) {
+      vista2.appendChild(containerImage(filterSlytherin[i]));
     }
-  }
+  } else if (event.target.value === 'hufflepuff') {
+    const filterHufflepuff = filterRolesCasas(POTTER, 'house', 'Hufflepuff');
+    for (let i = 0; i < filterHufflepuff.length; i += 1) {
+      vista2.appendChild(containerImage(filterHufflepuff[i]));
+    }
+  } else if (event.target.value === 'ravenclaw') {
+    const filterRavenclaw = filterRolesCasas(POTTER, 'house', 'Ravenclaw');
+    for (let i = 0; i < filterRavenclaw.length; i += 1) {
+      vista2.appendChild(containerImage(filterRavenclaw[i]));
+    }
+  };
 });
 
 

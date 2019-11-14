@@ -1,72 +1,86 @@
 body{
-    background: radial-gradient(circle closest-side, #09104F, #181E56, #111113);
-    width: 1440px;
-    height: 1024spx;
+  width: 1440px;
+  height: 1024px;
+  background-image: url(GIF/castillo.gif); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 img{
     width: 1000px;
-    height: 391px;
-    margin-left: 300px;
-    margin-top: 50px; 
+    height: 250px;
+    margin-left: 300px; 
+}
+.cartilla{
+  color: lightblue;
+  background: black;
 }
 
-.cartilla{
-    color: aqua;
+.lispersonajes{
+  display: inline;
+  color: lightblue;
 }
-.nombre1{
-  color: aqua;
+
+#vista3{
+  color: lightblue;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
 }
+
+#vista4{
+  color: lightblue;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+
 .imagen1{
   width: 256px;
   height: 256px;
-  margin-left: 2px;
+  border-radius: 50%;
 }
-.imagen2{
-    width: 256px;
-    height: 256px;
-    margin-left: 2px;
-  }
 
-  .imagen3{
-    width: 256px;
-    height: 256px;
-    margin-left: 2px;
-  }
-
-  .imagen4{
-    width: 256px;
-    height: 256px;
-    margin-left: 2px;
+  .namebtns{
+    color: lightblue;
+    font-size: 45px;
+    margin-left: 500px;
+  
   }
 
 #btnpersonajes{
-    background-image: url(IMG/perso6.jpg);
+    background-image: url(GIF/personajes3.gif);
     width: 400px;
     height: 400px;
-    margin-top: 100px;
-    margin-left: 90px;   
+    margin-top: 20px;
+    margin-left: 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;  
 }
 
 #btnvaritas{
-    background-image: url(IMG/varit2.jpg);
+    background-image: url(GIF/varitas.gif);
     width: 400px;
     height: 400px;
-    margin-left: 75px;    
+    margin-left: 75px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;    
 }
 #btnpatronum{
-    background-image: url(IMG/patro1.jpg);
+    background-image: url(GIF/patronus.gif);
     width: 400px;
     height: 400px;
     margin-left: 65.010px;
-
-}
-
-.vista3{
-    color: aqua;
-}
-
-.vista4{
-    color: aqua;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
 .hide {

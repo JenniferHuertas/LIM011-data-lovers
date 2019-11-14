@@ -18,15 +18,16 @@ export const filterPatronus = (data, prop) => {
     for (let i = 0; i < data.length; i += 1 ) {
       newPatronus += `
         <section class = "vista4">
-          <img class ="imagen3" src=${data[i].image}>
-          <p class ="patronus"> Nombre: ${data[i].patronus} </p>
-          <p class ="nombre2"> Pertenece a: ${data[i].name} </p>
+          <img class ="imagen1" src=${data[i].image}>
+          <p> Patronus: ${data[i].patronus} </p>
+          <p> Pertenece a: ${data[i].name} </p>
         </section>
       `;
     }
     return newPatronus;
   }
 
+  // Filtrado de Varitas
   export const filterVaritas = (data, propiedad) => {
     let arrayVaritas = [];
     for (let i = 0; i < data.length; i += 1) {
@@ -49,10 +50,10 @@ export const filterPatronus = (data, prop) => {
     for (let i = 0; i < data.length; i += 1 ) {
       newVaritas += `
         <section class="vista3">
-          <img class="imagen4" src=${data[i].image}>
-          <p class="nombre3"> Madera: ${data[i].wand.wood} </p>
-          <p class="nombre3"> Núcleo: ${data[i].wand.core} </p>
-          <p class="nombre3"> Pertenece a: ${data[i].name} </p>
+          <img class="imagen1" src=${data[i].image}>
+          <p> Madera: ${data[i].wand.wood} </p>
+          <p> Núcleo: ${data[i].wand.core} </p>
+          <p> Pertenece a: ${data[i].name} </p>
         
         </section>
       `;
@@ -60,7 +61,8 @@ export const filterPatronus = (data, prop) => {
     return newVaritas;
   }
 
-  export const filterRoles = (data, propiedad, value) => {
+  //Filtrado de Roles y Casas
+  export const filterRolesCasas = (data, propiedad, value) => {
     const newRoles = [];
     for (let i = 0; i < data.length; i += 1) {
       if (data[i][propiedad] === value) {
@@ -73,18 +75,10 @@ export const filterPatronus = (data, prop) => {
     return newRoles;
   };
 
-  export const filterCasas = (data, propiedad, value) => {
-    const newCasas = [];
-    for (let i = 0; i < data.length; i += 1) {
-      if (data[i][propiedad] === value) {
-        newCasas.push({
-          name: data[i].name,
-          image: data[i].image,
-        });
-      }
-    }
-    return newCasas;
-  };
+  
 
+
+
+  
   
 
