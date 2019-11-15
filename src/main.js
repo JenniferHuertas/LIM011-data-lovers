@@ -1,5 +1,5 @@
 import POTTER from './data/potter/potter.js';
-import {filterPatronus, imagePatronus, filterVaritas, imageVaritas, filterRolesCasas} from './data.js';
+import {filterPatronus, filterVaritas, filterRolesCasas} from './data.js';
 
 
 
@@ -49,11 +49,11 @@ const containerImage = (data) => {
   return sectionElement;
 };
 
-// Select de roles
 for (let i = 0; i < POTTER.length; i += 1) {
   vista2.appendChild(containerImage(POTTER[i]));
 }
 
+// Select de roles
 roles.addEventListener('change', (event) => {
   vista2.innerHTML = '';
 
@@ -70,11 +70,11 @@ roles.addEventListener('change', (event) => {
   }
 });
 
-// Select de casas
 for (let i = 0; i < POTTER.length; i += 1) {
   vista2.appendChild(containerImage(POTTER[i]));
 }
 
+// Select de casas
 casas.addEventListener('change', (event) => {
   vista2.innerHTML = '';
 
@@ -111,6 +111,23 @@ btnpersonajes.addEventListener('click', (event) => {
 });
 
 // Funcion ocultar para boton varitas y mostrar datos de las varitas
+const imageVaritas = (data) => {
+  let newVaritas = '';
+  for (let i = 0; i < data.length; i += 1 ) {
+    newVaritas += `
+      <section class="vista3">
+        <img class="imagen1" src=${data[i].image}>
+        <p> Madera: ${data[i].wand.wood} </p>
+        <p> Núcleo: ${data[i].wand.core} </p>
+        <p> Pertenece a: ${data[i].name} </p>
+      
+      </section>
+    `;
+  }
+  return newVaritas;
+}
+
+
 btnVaritas.addEventListener('click', (event) => {
   event.preventDefault();
   vista1.classList.add('hide');
@@ -119,7 +136,21 @@ btnVaritas.addEventListener('click', (event) => {
   vista3.innerHTML= imageVaritas(filterVaritas1);
 });
 
-// Funcion ocultar para boton patronum y jalar datos de patronus
+// Funcion ocultar para boton patronus y jalar datos de patronus
+const imagePatronus = (data) => {
+  let newPatronus = '';
+  for (let i = 0; i < data.length; i += 1 ) {
+    newPatronus += `
+      <section class = "vista4">
+        <img class ="imagen1" src=${data[i].image}>
+        <p> Patronus: ${data[i].patronus} </p>
+        <p> Pertenece a: ${data[i].name} </p>
+      </section>
+    `;
+  }
+  return newPatronus;
+}
+
 patronum.addEventListener('click', (event) => {
   event.preventDefault();
   vista1.classList.add('hide');
