@@ -21,7 +21,7 @@ const containerImage = (data) => {
   sectionElement.innerHTML = `
   <section class = "lispersonajes">
     <img class = "imagen1" src= ${data.image}>
-    <p> Nombre: ${data.name} </p>
+    <p class= "nombre"> Nombre: ${data.name} </p>
   </section>
   `;
   sectionElement.addEventListener('click', (event) => {
@@ -29,20 +29,23 @@ const containerImage = (data) => {
     vista2.classList.add('hide');
     datosPersonaje.classList.remove('hide');
     datosPersonaje.innerHTML = `  
-    <ul class="cartilla" >
-    <img class = "imagen1" src= ${data.image}>
-    <li>Nombre: ${data.name}</li>
-    <li>Especie: ${data.species}</li>
-    <li>Género: ${data.gender}</li>
-    <li>Casa: ${data.house}</li>   
-    <li>Fecha de Nacimiento: ${data.dateOfBirth}</li>  
-    <li>Año de Nacimiento: ${data.yearOfBirth}</li>    
-    <li>Ascendencia: ${data.ancestry}</li>    
-    <li>Color de Ojos: ${data.eyeColour}</li>   
-    <li>Color de Cabello: ${data.hairColour}</li>
-    <li>Patronus: ${data.patronus}</li>   
-    <li>Actor: ${data.actor}</li>    
-    </ul>
+    <section class="ordenar1">
+      <img class = "imagen2" src= ${data.image}>
+      <h2>Datos del Personaje</h2>
+        <ul class="cartilla" >
+          <li class="name">Nombre: ${data.name}</li>
+          <li class="name">Especie: ${data.species}</li>
+          <li class="name">Género: ${data.gender}</li>
+          <li class="name">Casa: ${data.house}</li>   
+          <li class="name">Fecha de Nacimiento: ${data.dateOfBirth}</li>  
+          <li class="name">Año de Nacimiento: ${data.yearOfBirth}</li>    
+          <li class="name">Ascendencia: ${data.ancestry}</li>    
+          <li class="name">Color de Ojos: ${data.eyeColour}</li>   
+          <li class="name">Color de Cabello: ${data.hairColour}</li>
+          <li class="name">Patronus: ${data.patronus}</li>   
+          <li class="name">Actor: ${data.actor}</li>    
+      </ul>
+     </section>
     `;
   });
 
@@ -108,6 +111,8 @@ btnpersonajes.addEventListener('click', (event) => {
   event.preventDefault();
   vista1.classList.add('hide');
   vista2.classList.remove('hide');
+  roles.classList.remove('hide');
+  casas.classList.remove('hide');
 });
 
 // Funcion ocultar para boton varitas y mostrar datos de las varitas
@@ -115,11 +120,11 @@ const imageVaritas = (data) => {
   let newVaritas = '';
   for (let i = 0; i < data.length; i += 1 ) {
     newVaritas += `
-      <section class="vista3">
+      <section class="lispersonajes">
         <img class="imagen1" src=${data[i].image}>
-        <p> Madera: ${data[i].wand.wood} </p>
-        <p> Núcleo: ${data[i].wand.core} </p>
-        <p> Pertenece a: ${data[i].name} </p>
+        <p class= "nombre"> Madera: ${data[i].wand.wood} </p>
+        <p class= "nombre"> Núcleo: ${data[i].wand.core} </p>
+        <p class= "nombre"> Pertenece: ${data[i].name} </p>
       
       </section>
     `;
@@ -141,10 +146,10 @@ const imagePatronus = (data) => {
   let newPatronus = '';
   for (let i = 0; i < data.length; i += 1 ) {
     newPatronus += `
-      <section class = "vista4">
+      <section class = "lispersonajes">
         <img class ="imagen1" src=${data[i].image}>
-        <p> Patronus: ${data[i].patronus} </p>
-        <p> Pertenece a: ${data[i].name} </p>
+        <p class= "nombre"> Patronus: ${data[i].patronus} </p>
+        <p class= "nombre"> Pertenece a: ${data[i].name} </p>
       </section>
     `;
   }

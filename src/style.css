@@ -6,55 +6,159 @@ body{
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-}
-img{
-    width: 1000px;
-    height: 250px;
-    margin-left: 300px; 
-}
-.cartilla{
-  color: lightblue;
-  background: black;
 }
 
-.lispersonajes{
-  display: inline;
-  color: lightblue;
+.hide {
+  display: none;
 }
 
-#vista3{
-  color: lightblue;
-  width: 256px;
-  height: 256px;
+li{
+  list-style: none;
+}
+
+#btnpersonajes{
+  background-image: url(GIF/personajes3.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 0px;
+  margin-left: 60px;
   border-radius: 50%;
 }
 
-#vista4{
-  color: lightblue;
-  width: 256px;
-  height: 256px;
+#btnvaritas{
+  background-image: url(GIF/varitas.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 3px;
+  margin-left: 60px;
+  border-radius: 50%;
+}
+
+#btnpatronum{
+  background-image: url(GIF/patronus.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 3px;
+  margin-left: 60px;
   border-radius: 50%;
 }
 
 .imagen1{
-  width: 256px;
-  height: 256px;
-  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  float: left;
+  border-radius: 70px;
+  border: 6px solid black;
+  animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
 }
 
-  .namebtns{
-    color: lightblue;
-    font-size: 45px;
-    margin-left: 500px;
-  
+@-webkit-keyframes mymove {
+    50% {border-color: lightblue;}
   }
+  
+  @keyframes mymove {
+    50% {border-color: lightblue;}
+  }
+
+  .desplegable, #roles, #casas{
+    margin-top: 20px;
+    color: powderblue;
+    margin-left: 20px;
+} 
+
+.imagen2{
+  height: 150px;
+  width: 150px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 961px) {
+  img{
+    width: 1000px;
+    height: 250px;
+    margin-left: 300px; 
+}
+
+h2{
+  font-size: 30px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.imagen1{
+  float: left;
+        height: 256px;
+        width: 256px;
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+        border: 20px solid black;
+        animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s infinite;
+      }
+
+      @-webkit-keyframes mymove {
+        50% {border-color: lightblue;}
+      }
+      
+      @keyframes mymove {
+        50% {border-color: lightblue;}
+      }
+
+.ordenar1{
+    background-color: lightblue;
+    height: 400px;
+    padding: 20px;
+}
+
+.imagen2{
+        float: left;
+        height: 350px;
+        width: 350px;
+        margin: auto;
+        display: block;
+        margin-left: 100px;
+        padding: 20px;
+    } 
+
+.lispersonajes{
+  float: left;
+   overflow: auto;
+   margin-left: 25px;
+   margin-top: 20px;
+}
+
+.nombre{
+  font-size: 22px;
+  color: white;
+  margin-left: 30px;
+  text-transform: capitalize;
+}
+
+.name{
+  color:white;
+  font-size: 25px;
+}
 
 #btnpersonajes{
     background-image: url(GIF/personajes3.gif);
     width: 400px;
     height: 400px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 90px;
     background-size: cover;
     background-position: center;
@@ -83,6 +187,17 @@ img{
     border-radius: 50%;
 }
 
-.hide {
-    display: none;
+.desplegable, #roles, #casas{
+  margin-top: 20px;
+  color: powderblue;
+  margin-left: 190px;
+  font-size: 30px;
+} 
+
+.namebtns{
+  margin-left: 190px;
+  font-size: 30px;
+  color: lightblue;
+}
+
 }
