@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
+      <meta charset="UTF-8">
+      
+      <title>Data Lovers</title>
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+      <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header> 
-      <img src="IMG/Harry-Potter-Logo.png" class="titulo">
-    </header>
-
-    <nav class="desplegable">
-      <select name="roles" id="roles" class="hide">
-        <option value="rol">Roles</option>
-        <option value="profesores">Profesores</option>
-        <option value="estudiantes">Estudiantes</option>
-     </select>
-     <select name="casas" id="casas" class="hide">
-        <option value="house">Casas</option>
-        <option value="gryffindor">Gryffindor</option>
-        <option value="slytherin">Slytherin</option>
-        <option value="hufflepuff">Hufflepuff</option>
-        <option value="ravenclaw">Ravenclaw</option>
-     </select> 
-    </nav>
-
-    <main>
-      <section id="vista1">
-        <section class="namebtns"><p>Personajes Varitas Patronus</p></section>
-            <button id="btnpersonajes"></button>
-            <button id="btnvaritas"></button>
-            <button id="btnpatronum"></button>        
-      </section>
-
-      <section id="vista2" class="hide" >
-            
-      </section>
-
-      <section id="vista3" class="hide">
+      <header>
+          <section class="contenedor">
+            <img src="IMG/logo_hp_smp.png" alt="">
+          </section> 
       
-      </section>
+      </header>
 
-      <section id="vista4" class="hide">
+      <main>
+
+          <nav id="desplegable" class="hide">
+              <select name="roles" id="roles" class="">
+                  <option value="rol">Roles</option>
+                  <option value="profesores">Profesores</option>
+                  <option value="estudiantes">Estudiantes</option>
+              </select>
+        
+              <select name="casas" id="casas" class="">
+                  <option value="house">Casas</option>
+                  <option value="gryffindor">Gryffindor</option>
+                  <option value="slytherin">Slytherin</option>
+                  <option value="hufflepuff">Hufflepuff</option>
+                  <option value="ravenclaw">Ravenclaw</option>
+              </select> 
+          </nav>
+        
+    
+          <section id="btnesInicio">
+              <button id="btnpersonajes"></button>
+              <button id="btnvaritas"></button>
+              <button id="btnpatronum"></button>        
+          </section>
+
+      <section id="todosPersonajes" class="hide"></section>
+
+      <section id="datosPersonaje" class="hide"></section>
+        
+      <section id="infoVaritas" class="hide"></section>
+
+      <section id="infoPatronus" class="hide"></section>
+
       
-      </section>
-
-      <section id="datosPersonaje" class="hide">
-
-      </section>
 
     </main>
 
