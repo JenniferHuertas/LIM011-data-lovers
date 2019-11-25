@@ -1,6 +1,5 @@
 import POTTER from './data/potter/potter.js';
-import {filterPatronus, filterVaritas, filterRolesCasas} from './data.js';
-
+import { filterPatronus, filterVaritas, filterRolesCasas } from './data.js';
 // Declaracion de Variables
 const todosPersonajes = document.querySelector('#todosPersonajes');
 const datosPersonaje = document.querySelector('#datosPersonaje');
@@ -12,8 +11,8 @@ const infoVaritas = document.querySelector('#infoVaritas');
 const infoPatronus = document.querySelector('#infoPatronus');
 const selectRoles = document.querySelector('#roles');
 const selectCasas = document.querySelector('#casas');
-const desplegable = document.querySelector('#desplegable')
-
+const desplegable = document.querySelector('#desplegable');
+const seccionCartilla = document.createElement('section');
 
 // Nueva sección creada para contener la data de personajes y sus caracteristicas
 const containerImage = (data) => {
@@ -24,6 +23,8 @@ const containerImage = (data) => {
     <p class= "nombre"> Nombre: ${data.name} </p>
   </section>
   `;
+
+  // Cartilla de personajes
   sectionElement.addEventListener('click', (event) => {
     event.preventDefault();
     todosPersonajes.classList.add('hide');
@@ -64,7 +65,6 @@ botonRegresaInicio.addEventListener('click', () => {
   todosPersonajes.classList.add('hide');
   desplegable.classList.add('hide');
   btnesInicio.classList.remove('hide');
-
 });
 
 // Creando mi botón de regresar para la cartilla
@@ -74,7 +74,6 @@ botonRegresaAtras.appendChild(crearTexto);
 botonRegresaAtras.id = 'botonRegresaAtras';
 
 // Creando una sección donde estarán mis elementos para poder insertar el botón
-const seccionCartilla = document.createElement('section');
 seccionCartilla.id = 'cartillaDePersonajes';
 datosPersonaje.appendChild(botonRegresaAtras);
 datosPersonaje.appendChild(seccionCartilla);
@@ -112,7 +111,6 @@ selectRoles.addEventListener('change', (event) => {
     const filterProfesores = filterRolesCasas(POTTER, 'hogwartsStaff', true);
     for (let i = 0; i < filterProfesores.length; i += 1) {
       todosPersonajes.appendChild(containerImage(filterProfesores[i]));
-      
     }
   }
 });
@@ -144,15 +142,14 @@ selectCasas.addEventListener('change', (event) => {
     const filterRavenclaw = filterRolesCasas(POTTER, 'house', 'Ravenclaw');
     for (let i = 0; i < filterRavenclaw.length; i += 1) {
       todosPersonajes.appendChild(containerImage(filterRavenclaw[i]));
-      
     }
-  };
+  }
 });
 
 // Mostrar datos de las varitas
 const imageVaritas = (data) => {
   let newVaritas = '';
-  for (let i = 0; i < data.length; i += 1 ) {
+  for (let i = 0; i < data.length; i += 1) {
     newVaritas += `
       <section class="listaPersonajes">
         <img class="imagen1" src=${data[i].image}>
@@ -164,13 +161,16 @@ const imageVaritas = (data) => {
     `;
   }
   return newVaritas;
-}
+};
 
-// Funcion ocultar para boton varitas 
+// Creando una sección donde estarán mis elementos para poder insertar el botón
+const seccionBoton = document.createElement('section');
+
+// Funcion ocultar para boton varitas
 btnVaritas.addEventListener('click', () => {
   btnesInicio.classList.add('hide');
   infoVaritas.classList.remove('hide');
-  const filterVaritas1 = filterVaritas(POTTER,'wand');
+  const filterVaritas1 = filterVaritas(POTTER, 'wand');
   seccionBoton.innerHTML = imageVaritas(filterVaritas1);
 });
 
@@ -180,8 +180,7 @@ const crearNombre = document.createTextNode('Atras');
 botonRegresar.appendChild(crearNombre);
 botonRegresar.id = 'botonRegresar';
 
-// Creando una sección donde estarán mis elementos para poder insertar el botón
-const seccionBoton = document.createElement('section');
+// Insertando boton
 seccionBoton.id = 'btnAtrasVaritas';
 infoVaritas.appendChild(botonRegresar);
 infoVaritas.appendChild(seccionBoton);
@@ -192,12 +191,10 @@ botonRegresar.addEventListener('click', () => {
   btnesInicio.classList.remove('hide');
 });
 
-
-
 // Mostrar datos de los patronus
 const imagePatronus = (data) => {
   let newPatronus = '';
-  for (let i = 0; i < data.length; i += 1 ) {
+  for (let i = 0; i < data.length; i += 1) {
     newPatronus += `
       <section class = "listaPersonajes">
         <img class ="imagen1" src=${data[i].image}>
@@ -207,14 +204,18 @@ const imagePatronus = (data) => {
     `;
   }
   return newPatronus;
-}
+};
+
+
+// Creando una sección donde estarán mis elementos para poder insertar el botón
+const seccionBtnPat = document.createElement('section');
 
 // Funcion ocultar para boton patronus
 btnPatronus.addEventListener('click', () => {
   btnesInicio.classList.add('hide');
   infoPatronus.classList.remove('hide');
   const filterPatronus1 = filterPatronus(POTTER, 'patronus');
-  seccionBtnPat.innerHTML= imagePatronus(filterPatronus1);
+  seccionBtnPat.innerHTML = imagePatronus(filterPatronus1);
 });
 
 // Creando mi botón de regresar para los patronus
@@ -223,8 +224,7 @@ const crearNombre1 = document.createTextNode('Atras');
 botonVolver.appendChild(crearNombre1);
 botonVolver.id = 'botonVolver';
 
-// Creando una sección donde estarán mis elementos para poder insertar el botón
-const seccionBtnPat = document.createElement('section');
+// Insertando boton
 seccionBtnPat.id = 'btnAtrasVaritas';
 infoPatronus.appendChild(botonVolver);
 infoPatronus.appendChild(seccionBtnPat);
@@ -234,5 +234,3 @@ botonVolver.addEventListener('click', () => {
   infoPatronus.classList.add('hide');
   btnesInicio.classList.remove('hide');
 });
-
-
