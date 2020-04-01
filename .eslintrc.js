@@ -10,7 +10,6 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-    firebase: 'readonly',
   },
   plugins: ['jest'],
   parserOptions: {

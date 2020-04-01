@@ -1,0 +1,249 @@
+body{
+  width: 1440px;
+  height: 1024px;
+  background-image: url(GIF/castillo.gif); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contenedor{
+  width: 95px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+li{
+  list-style: none;
+}
+
+#btnpersonajes{
+  background-image: url(GIF/personajes3.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 0px;
+  margin-left: 60px;
+  border-radius: 50%;
+}
+
+#btnvaritas{
+  background-image: url(GIF/varitas.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 3px;
+  margin-left: 60px;
+  border-radius: 50%;
+}
+
+#btnpatronum{
+  background-image: url(GIF/patronus.gif);
+  background-position: center center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 170px;
+  margin-top: 3px;
+  margin-left: 60px;
+  border-radius: 50%;
+}
+
+.imagen1{
+  height: 100px;
+  width: 100px;
+  float: left;
+  border-radius: 70px;
+  border: 6px solid black;
+  animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+    50% {border-color: lightblue;}
+  }
+  
+  @keyframes mymove {
+    50% {border-color: lightblue;}
+  }
+
+  .desplegable, #roles, #casas{
+    margin-top: 20px;
+    color: powderblue;
+    margin-left: 20px;
+}
+
+.name{
+  color:white;
+  font-size: 15px;
+  margin-left: 25px;
+  text-transform: capitalize;
+}
+
+.cartillaPersonajes{
+  background-color: lightblue;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.imagen2{
+  height: 150px;
+  width: 150px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.listaPersonajes{
+  float: left;
+  overflow: auto;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.nombre{
+  font-size: 10px;
+  color: white;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+
+@media only screen and (min-width: 961px) {
+ 
+  .contenedor{
+    width: 200px;
+    max-width: 1000px;
+    margin: 50px;
+}
+
+.titulo{
+  font-size: 25px;
+  margin: 0;
+  font-weight: 700px;
+}
+
+@font-face {
+  font-family: "HARRYP";
+  src: url(HarryP);
+}
+
+h2{
+  font-size: 30px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.imagen1{
+        float: left;
+        height: 256px;
+        width: 256px;
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+        border: 20px solid black;
+        animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s infinite;
+}
+
+        @-webkit-keyframes mymove {
+        50% {border-color: lightblue;}
+}
+      
+      @keyframes mymove {
+        50% {border-color: lightblue;}
+      }
+
+.cartillaPersonajes{
+    background-color: lightblue;
+    height: 400px;
+    padding: 20px;
+}
+
+.imagen2{
+        float: left;
+        height: 350px;
+        width: 350px;
+        margin: auto;
+        display: block;
+        margin-left: 100px;
+        padding: 20px;
+} 
+
+.listaPersonajes{
+  float: left;
+   overflow: auto;
+   margin-left: 25px;
+   margin-top: 20px;
+}
+
+.nombre{
+  font-size: 22px;
+  color: white;
+  margin-left: 30px;
+  text-transform: capitalize;
+}
+
+.name{
+  color:white;
+  font-size: 25px;
+}
+
+#btnpersonajes{
+    background-image: url(GIF/personajes3.gif);
+    width: 400px;
+    height: 400px;
+    margin-top: 0px;
+    margin-left: 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;  
+}
+
+#btnvaritas{
+    background-image: url(GIF/varitas.gif);
+    width: 400px;
+    height: 400px;
+    margin-left: 75px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;    
+}
+#btnpatronum{
+    background-image: url(GIF/patronus.gif);
+    width: 400px;
+    height: 400px;
+    margin-left: 65.010px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.desplegable, #roles, #casas{
+  margin-top: 20px;
+  color: powderblue;
+  margin-left: 190px;
+  font-size: 30px;
+} 
+
+.namebtns{
+  margin-left: 190px;
+  font-size: 30px;
+  color: lightblue;
+}
+
+}
